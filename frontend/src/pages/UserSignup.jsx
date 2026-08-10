@@ -39,7 +39,7 @@ const UserSignup = () => {
             setLoading(true);
             
             // Backend API par data bhejna (keys Django model se match karni chahiye)
-            const res = await axios.post("http://127.0.0.1:8000/api/student/signup/", {
+            const res = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/student/signup/", {
                 full_name: fullName,
                 mobile: mobile,
                 email: email,

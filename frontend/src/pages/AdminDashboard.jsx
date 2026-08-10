@@ -19,7 +19,7 @@ const AdminDashboard = () => {
 
     const fetchStats = async () => {
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/admin/dashboard-stats/");
+            const res = await axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/admin/dashboard-stats/");
             if (res.data.success) {
                 setStats(res.data.stats);
             }

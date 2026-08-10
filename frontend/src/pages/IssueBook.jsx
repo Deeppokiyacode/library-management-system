@@ -37,7 +37,7 @@ const IssueBook = () => {
         if (!studentIdInput) return toast.warning("Enter Student ID first.");
         try {
             setLoadingStudent(true);
-            const res = await axios.get(`http://127.0.0.1:8000/api/issue-book/search-student/${studentIdInput}/`);
+            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/issue-book/search-student/${studentIdInput}/`);
             if (res.data.success) {
                 setFoundStudent(res.data.student);
                 toast.success("Student found!");
@@ -55,7 +55,7 @@ const IssueBook = () => {
         if (!bookIsbnInput) return toast.warning("Enter ISBN first.");
         try {
             setLoadingBook(true);
-            const res = await axios.get(`http://127.0.0.1:8000/api/issue-book/search-book/${bookIsbnInput}/`);
+            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/issue-book/search-book/${bookIsbnInput}/`);
             if (res.data.success) {
                 setFoundBook(res.data.book);
                 toast.success("Book found!");
@@ -80,7 +80,7 @@ const IssueBook = () => {
 
         try {
             setIssuing(true);
-            const res = await axios.post("http://127.0.0.1:8000/api/issue-book/submit/", {
+            const res = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/issue-book/submit/", {
                 student_id: foundStudent.id, // Primary Key bhej rahe hain
                 book_id: foundBook.id,       // Primary Key bhej rahe hain
                 remark: remark
@@ -233,7 +233,7 @@ const IssueBook = () => {
                             <div className="card border-0 shadow-sm rounded-4">
                                 <div className="card-body p-4 d-flex gap-3 align-items-center">
                                     {foundBook.cover_image ? (
-                                        <img src={`http://127.0.0.1:8000${foundBook.cover_image}`} alt="cover" className="rounded shadow-sm" style={{width: '50px', height: '65px', objectFit: 'cover'}} />
+                                        <img src={`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)${foundBook.cover_image}`} alt="cover" className="rounded shadow-sm" style={{width: '50px', height: '65px', objectFit: 'cover'}} />
                                     ) : (
                                         <div className="bg-secondary rounded d-flex justify-content-center align-items-center text-white" style={{width: '50px', height: '65px'}}>
                                             <i className="fa-solid fa-book"></i>

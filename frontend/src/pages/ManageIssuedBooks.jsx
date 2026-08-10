@@ -20,7 +20,7 @@ const ManageIssuedBooks = () => {
     const fetchIssuedBooks = async () => {
         try {
             setLoading(true);
-            const res = await axios.get("http://127.0.0.1:8000/api/issued-books/");
+            const res = await axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/issued-books/");
             setIssuedBooks(res.data);
         } catch (error) {
             console.error(error);

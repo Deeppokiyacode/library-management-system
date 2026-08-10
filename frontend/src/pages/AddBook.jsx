@@ -35,8 +35,8 @@ const AddBook = () => {
             setLoadingDropdown(true);
 
             const [catRes, authRes] = await Promise.all([
-                axios.get("http://127.0.0.1:8000/api/categories/"),
-                axios.get("http://127.0.0.1:8000/api/author/")
+                axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/categories/"),
+                axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/author/")
             ]);
 
             // Filter active categories. Author model doesn't have is_active, so we map it directly.
@@ -80,7 +80,7 @@ const AddBook = () => {
 
         try {
             setLoading(true);
-            const response = await axios.post("http://127.0.0.1:8000/api/books/add/", formData, {
+            const response = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/books/add/", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data"
                 }

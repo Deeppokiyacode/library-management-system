@@ -30,7 +30,7 @@ function StudentDashboard() {
     const fetchDashboardStats = async (studentId) => {
         try {
             setLoading(true);
-            const res = await axios.get(`http://127.0.0.1:8000/api/student/dashboard-stats/${studentId}/`);
+            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/student/dashboard-stats/${studentId}/`);
             if (res.data.success) {
                 setStats({
                     totalBooks: res.data.total_books,

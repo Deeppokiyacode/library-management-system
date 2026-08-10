@@ -26,7 +26,7 @@ const StudentIssuedBooks = () => {
 
     const fetchMyBooks = async (studentId) => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/user/my-issued-books/${studentId}/`);
+            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/user/my-issued-books/${studentId}/`);
             if (res.data.success) {
                 setIssuedBooks(res.data.data);
             }

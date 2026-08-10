@@ -23,7 +23,7 @@ const IssuedBookDetails = () => {
 
     const fetchDetails = async () => {
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/issued-book/${id}/`);
+            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/issued-book/${id}/`);
             if (res.data.success) {
                 setDetails(res.data.data);
                 setFineAmount(res.data.data.fine || 0); // Agar pehle se fine hai to set karo
@@ -44,7 +44,7 @@ const IssuedBookDetails = () => {
 
         try {
             setReturning(true);
-            const res = await axios.post(`http://127.0.0.1:8000/api/issued-book/${id}/return/`, {
+            const res = await axios.post(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/issued-book/${id}/return/`, {
                 fine: fineAmount
             });
 
@@ -120,7 +120,7 @@ const IssuedBookDetails = () => {
                                 
                                 <div className="d-flex gap-4 mb-4">
                                     {details.cover_image ? (
-                                        <img src={`http://127.0.0.1:8000${details.cover_image}`} alt="cover" className="rounded shadow-sm" style={{width: '80px', height: '110px', objectFit: 'cover'}} />
+                                        <img src={`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)${details.cover_image}`} alt="cover" className="rounded shadow-sm" style={{width: '80px', height: '110px', objectFit: 'cover'}} />
                                     ) : (
                                         <div className="bg-secondary rounded d-flex justify-content-center align-items-center text-white" style={{width: '80px', height: '110px'}}>
                                             <i className="fa-solid fa-book fs-3"></i>

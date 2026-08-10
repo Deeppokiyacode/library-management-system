@@ -24,7 +24,7 @@ const MyLibrary = () => {
         try {
             setLoading(true);
             // Same API used in Admin Manage Books
-            const res = await axios.get("http://127.0.0.1:8000/api/books/");
+            const res = await axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/books/");
             setBooks(res.data);
             setFilteredBooks(res.data); // Initially, show all books
         } catch (error) {
@@ -99,7 +99,7 @@ const MyLibrary = () => {
                                         <div className="d-flex justify-content-center align-items-center p-4 bg-white border-bottom" style={{height: '250px'}}>
                                             {book.cover_image ? (
                                                 <img 
-                                                    src={`http://127.0.0.1:8000${book.cover_image}`} 
+                                                    src={`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)${book.cover_image}`} 
                                                     alt={book.title} 
                                                     className="img-fluid rounded shadow-sm"
                                                     style={{maxHeight: '100%', objectFit: 'contain'}}
