@@ -23,7 +23,7 @@ const AdminLogin = () => {
 
     try {
       const res = await axios.post(
-        "http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/admin-login/",
+        "https://library-management-system-0haj.onrender.com/api/admin-login/",
         {
           username,
           password,

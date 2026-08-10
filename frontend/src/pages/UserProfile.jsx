@@ -24,7 +24,7 @@ const UserProfile = () => {
 
     const fetchProfileData = async (id) => {
         try {
-            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/student/profile/${id}/`);
+            const res = await axios.get(`https://library-management-system-0haj.onrender.com/api/student/profile/${id}/`);
             if (res.data.success) {
                 const data = res.data.student;
                 setStudentId(data.student_id);
@@ -47,7 +47,7 @@ const UserProfile = () => {
 
         try {
             setLoading(true);
-            const res = await axios.put(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/student/profile/${studentId}/update/`, {
+            const res = await axios.put(`https://library-management-system-0haj.onrender.com/api/student/profile/${studentId}/update/`, {
                 full_name: fullName,
                 mobile: mobile
             });

@@ -50,7 +50,7 @@ const ChangePassword = () => {
         try {
             setLoading(true);
             // Backend API ko call karna
-            const res = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/admin/change-password/", {
+            const res = await axios.post("https://library-management-system-0haj.onrender.com/api/admin/change-password/", {
                 username: username,
                 old_password: currentPassword,
                 new_password: newPassword

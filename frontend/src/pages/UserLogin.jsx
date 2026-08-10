@@ -22,7 +22,7 @@ const UserLogin = () => {
             setLoading(true);
             
             // Backend par request bhejna
-            const res = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/student/login/", {
+            const res = await axios.post("https://library-management-system-0haj.onrender.com/api/student/login/", {
                 login_id: loginId,
                 password: password
             });

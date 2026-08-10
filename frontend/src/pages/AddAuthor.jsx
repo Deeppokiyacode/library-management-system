@@ -10,7 +10,7 @@ const AddAuthor = () => {
     // Backend se Authors fetch karne ka function
     const getAuthors = async () => {
         try {
-            const res = await axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/author/");
+            const res = await axios.get("https://library-management-system-0haj.onrender.com/api/author/");
             setAuthors(res.data);
         } catch (error) {
             console.log(error);
@@ -33,7 +33,7 @@ const AddAuthor = () => {
         setLoading(true);
 
         try {
-            const res = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/author/add/", {
+            const res = await axios.post("https://library-management-system-0haj.onrender.com/api/author/add/", {
                 name: name,
             });
 

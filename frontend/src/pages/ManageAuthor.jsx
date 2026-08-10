@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/author/";
+const API_URL = "https://library-management-system-0haj.onrender.com/api/author/";
 
 const ManageAuthor = () => {
     const navigate = useNavigate();

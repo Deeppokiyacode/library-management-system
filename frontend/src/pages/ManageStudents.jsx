@@ -21,7 +21,7 @@ const ManageStudents = () => {
     const fetchStudents = async () => {
         try {
             setLoading(true);
-            const res = await axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/students/");
+            const res = await axios.get("https://library-management-system-0haj.onrender.com/api/students/");
             setStudents(res.data);
         } catch (error) {
             console.error(error);
@@ -34,7 +34,7 @@ const ManageStudents = () => {
     // Active/Inactive toggle karne ka logic
     const handleToggleStatus = async (id) => {
         try {
-            const res = await axios.put(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/students/${id}/toggle-status/`);
+            const res = await axios.put(`https://library-management-system-0haj.onrender.com/api/students/${id}/toggle-status/`);
             if (res.data.success) {
                 toast.success(res.data.message);
                 fetchStudents(); // Table ko refresh karne ke liye wapas call kiya

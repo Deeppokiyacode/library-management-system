@@ -43,7 +43,7 @@ const UserChangePassword = () => {
 
         try {
             setLoading(true);
-            const res = await axios.post("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/student/change-password/", {
+            const res = await axios.post("https://library-management-system-0haj.onrender.com/api/student/change-password/", {
                 student_id: studentData.student_id,
                 old_password: currentPassword,
                 new_password: newPassword

@@ -22,7 +22,7 @@ const StudentHistory = () => {
 
     const fetchStudentHistory = async () => {
         try {
-            const res = await axios.get(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/students/${id}/history/`);
+            const res = await axios.get(`https://library-management-system-0haj.onrender.com/api/students/${id}/history/`);
             if (res.data.success) {
                 setStudentData(res.data.student);
                 setHistory(res.data.history);

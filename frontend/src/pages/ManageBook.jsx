@@ -35,9 +35,9 @@ const ManageBook = () => {
     const fetchInitialData = async () => {
         try {
             const [booksRes, catRes, authRes] = await Promise.all([
-                axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/books/"),
-                axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/categories/"),
-                axios.get("http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/author/"),
+                axios.get("https://library-management-system-0haj.onrender.com/api/books/"),
+                axios.get("https://library-management-system-0haj.onrender.com/api/categories/"),
+                axios.get("https://library-management-system-0haj.onrender.com/api/author/"),
             ]);
             setBooks(booksRes.data);
             
@@ -87,7 +87,7 @@ const ManageBook = () => {
 
         try {
             setLoading(true);
-            const res = await axios.put(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/books/${editBookId}/update/`, formData, {
+            const res = await axios.put(`https://library-management-system-0haj.onrender.com/api/books/${editBookId}/update/`, formData, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             
@@ -118,7 +118,7 @@ const ManageBook = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this book?")) {
             try {
-                const res = await axios.delete(`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)/api/books/${id}/delete/`);
+                const res = await axios.delete(`https://library-management-system-0haj.onrender.com/api/books/${id}/delete/`);
                 if (res.data.success) {
                     toast.success(res.data.message);
                     fetchInitialData();
@@ -228,7 +228,7 @@ const ManageBook = () => {
                                         <label className="form-label small text-secondary">Book Cover</label>
                                         {currentCoverUrl && (
                                             <div className="mb-2">
-                                                <img src={`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)${currentCoverUrl}`} alt="Current Cover" className="img-thumbnail" style={{ height: "60px", width:"50px", objectFit:"cover" }} />
+                                                <img src={`https://library-management-system-0haj.onrender.com${currentCoverUrl}`} alt="Current Cover" className="img-thumbnail" style={{ height: "60px", width:"50px", objectFit:"cover" }} />
                                             </div>
                                         )}
                                         <input 
@@ -283,7 +283,7 @@ const ManageBook = () => {
                                                         <td className="py-3 text-start">
                                                             <div className="d-flex flex-column align-items-start">
                                                                 {item.cover_image ? (
-                                                                     <img src={`http://[https://library-management-system-0haj.onrender.com](https://library-management-system-0haj.onrender.com)${item.cover_image}`} alt="cover" className="rounded mb-1 shadow-sm" style={{width: "45px", height: "55px", objectFit: "cover"}} />
+                                                                     <img src={`https://library-management-system-0haj.onrender.com${item.cover_image}`} alt="cover" className="rounded mb-1 shadow-sm" style={{width: "45px", height: "55px", objectFit: "cover"}} />
                                                                 ) : (
                                                                     <div className="bg-secondary rounded mb-1 d-flex justify-content-center align-items-center text-white small" style={{width: "45px", height: "55px"}}>No Img</div>
                                                                 )}
